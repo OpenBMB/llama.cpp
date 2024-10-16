@@ -50,6 +50,20 @@ brew install ffmpeg
 brew install pkg-config
 ```
 
+### Window
+Compiling from source code on window with `make` will be a little more complicated, but using `cmake` will be more convenient.
+
+CPU:
+```
+cmake -B build
+cmake --build build --config Release -t llama-minicpmv-cli
+```
+CUDA:
+```
+cmake -B build -DLLAMA_CUDA=ON
+cmake --build build --config Release -t llama-minicpmv-cli
+```
+
 ### Android
 
 #### Build on Android device using Termux
